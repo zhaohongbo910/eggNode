@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% block title %}
+    <title>Document</title>
+    {% endblock %}
+    <link rel="stylesheet" href="public/layer/theme/default/layer.css">
+    {% block link %}{% endblock %}
+    {% block headsctipt %}{% endblock %}
+    {% block style %}{% endblock %}
+</head>
+<body>
+    {% block header %}{% endblock %}
+    {% block content %}{% endblock %}
+    {% block footer %}{% endblock %}
+</body>
+    <script src="public/js/jquery.min.js"></script>
+    <script src="public/layer/layer.js"></script>
+    {% block footScript %}{% endblock %}
+    {% block script%}{% endblock %}
+</html>

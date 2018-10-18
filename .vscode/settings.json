@@ -1,0 +1,24 @@
+{   
+    "files.autoSave": "onFocusChange",
+    "editor.fontSize": 18,
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 120,
+    "eslint.enable": true,
+    "eslint.run": "onType",
+    "eslint.autoFixOnSave":true,
+    "eslint.validate": [
+         "javascript",
+         "javascriptreact",
+         { "language": "js", "autoFix": true },
+
+    ],
+    // "files.associations": {"*.vue":"vue"},
+    // "emmet.syntaxProfiles": {
+    //     "vue-html": "html",
+    //     "vue": "html"
+    // },
+    "explorer.confirmDelete": false,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "window.zoomLevel": 0,
+    "editor.tabSize": 4,
+}
