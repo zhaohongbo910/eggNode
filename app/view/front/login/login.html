@@ -5,8 +5,8 @@
 	{% endblock %}
 
 	{% block link %}
-		<link rel="stylesheet" media="screen" href="public/css/style.css">
-		<link rel="stylesheet" type="text/css" href="public/css/reset.css"/>
+		<link rel="stylesheet" media="screen" href="/public/css/style.css">
+		<link rel="stylesheet" type="text/css" href="/public/css/reset.css"/>
 	{% endblock %}
  
 {% block content %}
@@ -17,14 +17,14 @@
 			</div>
 			<form onsubmit="return false" id="loginFrom">
 			<div class="login-center clearfix">
-				<div class="login-center-img"><img src="public/images/name.png"/></div>
+				<div class="login-center-img"><img src="/public/images/name.png"/></div>
 				<div class="login-center-input">
 					<input type="text" name="email" id='email' value="" placeholder="请输入您的邮箱" onfocus="this.placeholder=''" onblur="this.placeholder='请输入您的邮箱'"/>
 					<div class="login-center-input-text">用户名</div>
 				</div>
 			</div>
 			<div class="login-center clearfix">
-				<div class="login-center-img"><img src="public/images/password.png"/></div>
+				<div class="login-center-img"><img src="/public/images/password.png"/></div>
 				<div class="login-center-input">
 					<input type="password" name="password" value="" id="password" placeholder="请输入您的密码" onfocus="this.placeholder=''" onblur="this.placeholder='请输入您的密码'"/>
 					<div class="login-center-input-text">密码</div>
@@ -35,7 +35,7 @@
 				登录
 			</div>
 			<div class="to-login">
-					<a href="/register">注册</a>
+					<a href="/login/register_get">注册</a>
 			</div>
 		</div>
 		<div class="sk-rotating-plane"></div>
@@ -46,8 +46,8 @@
 
 {% block footScript %}
 	<!-- scripts -->
-	<script src="public/js/particles.min.js"></script>
-	<script src="public/js/app.js"></script>
+	<script src="/public/js/particles.min.js"></script>
+	<script src="/public/js/app.js"></script>
 	<script type="text/javascript">
 			function hasClass(elem, cls) {
 				cls = cls || '';
@@ -75,6 +75,8 @@
 {% block script%}
 	<script>
 
+
+
 				$('.login-button').on('click',function(){
 				//  var usernameReg = /^[a-zA-Z0-9_-]{4,16}$/;	 
 				 var passwordReg  = /^[a-zA-Z0-9]{6,10}$/;
@@ -87,7 +89,7 @@
 						return false
 					}
 					$.ajax({
-						url:'/loginPost',
+						url:'/login/login_post',
 						method:'POST',
 						data:$('#loginFrom').serialize(),
 						success:function(data){

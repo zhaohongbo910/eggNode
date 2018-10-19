@@ -4,11 +4,13 @@
  * @param {Egg.Application} app - egg application
  */
 module.exports = app => {
-    //
-    // console.log(app.router.hostname,'router..................................................') 
+
+    // 首页
     require('./router/indexRouter')(app);
      //用户路由
     require('./router/userRouter')(app);
+    // 登录
+    require('./router/loginRouter')(app)
     // 
 };
 

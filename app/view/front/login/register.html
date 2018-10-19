@@ -12,21 +12,21 @@
 			</div>
 			<form onsubmit="return false" id="login-regeist">
 			<div class="login-center clearfix">
-				<div class="login-center-img"><img src="public/images/name.png"/></div>
+				<div class="login-center-img"><img src="/public/images/name.png"/></div>
 				<div class="login-center-input">
 					<input type="text" name="email" id='email' value="" placeholder="请输入您的邮箱" onfocus="this.placeholder=''" onblur="this.placeholder='请输入您的邮箱'"/>
 					<div class="login-center-input-text">邮箱</div>
 				</div>
             </div>
             <div class="login-center clearfix">
-                    <div class="login-center-img"><img src="public/images/name.png"/></div>
+                    <div class="login-center-img"><img src="/public/images/name.png"/></div>
                     <div class="login-center-input">
                         <input type="text" name="username" id='username' value="" placeholder="请输入您的用户名" onfocus="this.placeholder=''" onblur="this.placeholder='请输入您的用户名'"/>
                         <div class="login-center-input-text">用户名</div>
                     </div>
             </div>
 			<div class="login-center clearfix">
-				<div class="login-center-img"><img src="public/images/password.png"/></div>
+				<div class="login-center-img"><img src="/public/images/password.png"/></div>
 				<div class="login-center-input">
 					<input type="password" name="password" value="" id='password' placeholder="请输入您的密码" onfocus="this.placeholder=''" onblur="this.placeholder='请输入您的密码'"/>
 					<div class="login-center-input-text">密码</div>
@@ -37,7 +37,7 @@
 				注册
             </div>
             <div class="to-login">
-                <a href="/login">登录</a>
+                <a href="/login/login_get">登录</a>
             </div>
 		</div>
 		<div class="sk-rotating-plane"></div>
@@ -61,7 +61,7 @@
 						return false
 					}
 					$.ajax({
-						url:'/register_post',
+						url:'/login/register_post',
 						method:'POST',
 						data:$('#login-regeist').serialize(),
 						success:function(data){
@@ -70,7 +70,7 @@
 							}else{
 								layer.msg(data.message)
 								setTimeout(()=>{
-									window.location.href = '/login'
+									window.location.href = '/login/login_get'
 								},500)	
 							}	
 						},
