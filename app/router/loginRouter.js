@@ -1,18 +1,15 @@
 module.exports = (app) =>{
     const { router, controller } = app;
-    const loginRouter = router.namespace('/login');
-    const LoginController = controller.comLoginController.loginController
-    // const 
-    
-    //登录
-    loginRouter.get('/login_get', LoginController.loginGET);
-    // 中间效验
-     // loginRouter.post('loginPost',require('../middleware/dataCheck')(),LoginController.loginPost);
-    loginRouter.post('/login_post',LoginController.loginPOST);
-
-    // 注册
-    loginRouter.get('/register_get', LoginController.registerGET);
-    loginRouter.post('/register_post', LoginController.registerPOST);
-    // 退出
-    loginRouter.get('/logout_get',LoginController.logoutGET)
-}
+    const Router = router.namespace('/holly');
+    const LoginController = controller.comLoginController.loginController;
+    //登录 -get
+    Router.get('/login', LoginController.loginGET);
+    //登录 -post
+    Router.post('/loginPost',LoginController.loginPOST);
+    // 注册-get
+    Router.get('/register', LoginController.registerGET);
+    // 登录-post
+    Router.post('/registerPost', LoginController.registerPOST);
+    // 退出-get
+    Router.get('/signOut',LoginController.logoutGET);
+};

@@ -7,10 +7,8 @@ class userService extends Service {
        *  @get fun  await this.app.mysql.get('posts', { id: 12 }); => SELECT * FROM `posts` WHERE `id` = 12 LIMIT 0, 1;
        *  @select fun 方法支持条件查询与结果的定制。
       */
-    async findEmail(email) {  
-      console.log(email,'server......................')
-      const  userResult =  await this.app.mysql.select('egg_user', {where:{ email:email},columns:'email'}); 
-      console.log(userResult,'userreana>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
+    async findEmail(email) {
+      const  userResult =  await this.app.mysql.select('egg_user', {where:{ email:email},columns:'email'});
       return userResult;
     }
 
@@ -29,7 +27,7 @@ class userService extends Service {
      * 
      */
     async created(option={}) {
-        let {username,password,email} = option
+        let {username,password,email} = option;
         const result = await this.app.mysql.insert('egg_user', { username: username,password:password,email:email});
         return result
     }

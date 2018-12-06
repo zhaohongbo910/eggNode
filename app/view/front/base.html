@@ -8,17 +8,19 @@
     <title>Document</title>
     {% endblock %}
     <link rel="stylesheet" href="/public/layer/theme/default/layer.css">
+    <link rel="stylesheet" href="/public/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <script src="/public/js/jquery.min.js"></script>
     {% block link %}{% endblock %}
     {% block headsctipt %}{% endblock %}
     {% block style %}{% endblock %}
 </head>
 <body>
-    {% block header %}{% endblock %}
-    {% block content %}{% endblock %}
-    {% block footer %}{% endblock %}
+{% block header %}{% endblock %}
+{% block content %}{% endblock %}
+{% block footer %}{% endblock %}
 </body>
-    <script src="/public/js/jquery.min.js"></script>
-    <script src="/public/layer/layer.js"></script>
-    {% block footScript %}{% endblock %}
-    {% block script%}{% endblock %}
+<script src="/public/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script src="/public/layer/layer.js"></script>
+{% block footScript %}{% endblock %}
+{% block script%}{% endblock %}
 </html>

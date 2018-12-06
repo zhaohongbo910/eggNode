@@ -1,0 +1,70 @@
+﻿{% extends "../home/index.html" %}
+
+{% block title%}
+<title>用户中心</title>
+{% endblock %}
+
+{% block linkheader %}
+	<link rel="stylesheet" type="text/css" href="/public/user/css/iconfont.css" />
+	<link rel="stylesheet" type="text/css" href="/public/user/css/style.css" />
+{% endblock %}
+
+{% block content %}
+		<div class="header">
+			<div class="user-info">
+				<div class="w1200">
+					<div class="user-headface">
+						<img src="/public/user/picture/user_face.jpg"/>
+					</div>
+					<div class="user-account">
+						<p class="tip">{{username}}</p>
+						<p class="account">
+							<span>邮箱:{{email}}</span>
+						</p>
+					</div>
+					<div class="user-modify">
+						<a href="/user/update">修改资料></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="main w1200">
+			<div class="left">
+				<ul>
+					<li>
+						<a href="#" class="active"><i class="icon iconfont icon-lingdang"></i>文章列表</a>
+					</li>
+					<li>
+						<a href="#"><i class="icon iconfont icon-fangzidichan"></i>留言类表</a>
+					</li>
+					<li>
+						<a href="#"><i class="icon iconfont icon-wenda"></i>问答</a>
+					</li>
+					<li>
+						<a href="#"><i class="icon iconfont icon-icon--"></i>相册列表</a>
+					</li>
+					<li>
+						<a href="#"><i class="icon iconfont icon-pinglun"></i>评论</a>
+					</li>
+					<li>
+						<a href="#"><i class="icon iconfont icon-geren"></i>个人资料</a>
+					</li>
+					<li>
+						<a href="#"><i class="icon iconfont icon-jilu"></i>收藏</a>
+					</li>
+				</ul>
+			</div>
+			<div class="right">
+				<div class="tap">
+					<span>系统消息</span>
+				</div>
+				<div class="container">
+					<div class="no-doc">
+						<img src="/public/user/picture/no_doc.jpg"/>
+						<p>您还没有消息哦~</p>
+					</div>
+				</div>
+			</div>
+		</div>
+{%  endblock %}
+

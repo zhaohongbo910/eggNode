@@ -4,7 +4,7 @@ module.exports = appInfo => {
   // console.log(appInfo)
   const config = exports = {
     keys:appInfo.name + '_1536887278778_3918',
-    middleware:['gzip','dataCheck'],
+    middleware:['gzip'],
     static:{
       dir: path.join(appInfo.baseDir, 'app/public')
     },
@@ -75,7 +75,5 @@ module.exports = appInfo => {
     //   database: 'egg',
     // }
   };
-
-  console.log(process.cwd(),'vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv')
   return config;
 };

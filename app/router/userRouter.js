@@ -1,7 +1,9 @@
 module.exports = app => {
-    const { router, controller } = app;
-    const userRouter = router.namespace('/user');
+    const { router, controller ,middleware} = app;
+    const Router = router.namespace('/user');
+    const  userController  = controller.comUserController.userController
     
-    // userRouter.get('/', controller.front.user.user.index);
-    // userRouter.get('/test', controller.front.user.user.action);
+    Router.get('/',middleware.isLogin(), userController.index);
+    Router.get('/update',middleware.isLogin(), userController.update);
+    
 };

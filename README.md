@@ -42,7 +42,7 @@ egg-project
 │   ├── controller -- 用于解析用户的输入，处理后返回相应的结果
 │   |   └── home.js
 │   ├── service (可选) -- 用于编写业务逻辑层，可选，建议使用，
-│   |   └── user.js
+│   |   └── User.js
 │   ├── middleware (可选) -- 中间件层
 │   |   └── response_time.js
 │   ├── schedule (可选)  -- 用于定时任务

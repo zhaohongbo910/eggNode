@@ -1,11 +1,6 @@
 module.exports = app => {
-    const { router, controller } = app;
-    const indexRouter = router.namespace('/')
-
-    console.log(controller)
-    const HomeController = controller.comHomeController.homeController
-    
-    // console.log(HomeController,'vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv')
-    indexRouter.get('/', HomeController.indexGET);
-    // indexRouter.get('*',HomeController.htmlGet)
+    const { router, controller,middleware } = app;
+    const Router = router.namespace('/');
+    const HomeController = controller.comHomeController.homeController;
+    Router.get('/', middleware.isLogin(),HomeController.indexGET);
 };
